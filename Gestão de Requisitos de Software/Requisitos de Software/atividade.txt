@@ -1,0 +1,23 @@
+Elaborar um texto que contemple:
+
+- Visão geral: o que são requisitos de software? Quais os tipos de requisitos? Qual o processo que abrange a engenharia de requisitos? Quais as atividades necessárias para a gestão de requisitos de software? 
+
+- Aplicações: apresente exemplos textuais ou ilustrativos para entender o tema apresentado.
+
+- Relevância: explique a relevância da gestão de requisitos para a qualidade final do produto, apresentando uma visão crítica sobre a aplicabilidade, contribuições, etc.
+
+- Desafios: discuta as fragilidades e os desafios atuais (de pesquisa e desenvolvimento) deste tema. 
+identifique e liste os grandes desafios da área na atualidade; pesquise na web; consulte artigos científicos da SBC, ACM e IEEE. Google Scholar e ResearchGate também são locais de pesquisa.
+
+- Nomes relevantes (ao menos 1) no cenário internacional e/ou nacional
+apresentar uma biografia curta e explicações sobre a atuação e contribuição da pessoa na área. 
+
+- Referências: referencie todo o material utilizado como base para elaborar a sua matéria, indicando também a fonte de figuras, vídeos e outros materiais, e links de acesso quando disponíveis. Recomendamos usar o padrão de referência da ABNT.
+
+Como será avaliado?
+
+1. Pontualidade: serão descontados 5 pontos de textos entregues fora do prazo. 
+2. Completude: será verificado se o texto contempla todos os itens solicitados. 
+3. Qualidade: será verificada a qualidade da escrita, da forma e do conteúdo.
+
+Postar em pdf.

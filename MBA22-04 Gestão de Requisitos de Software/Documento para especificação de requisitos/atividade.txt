@@ -1,0 +1,11 @@
+Esta atividade consiste em criar um modelo de documento de requisitos que contenha seções que  contemplem os tipos de requisitos: funcionais, requisitos não funcionais e requisitos de negócios, além de conter campos para os atributos (definir quais atributos devem ser considerados).
+
+O formato para especificação de requisitos é livre ( textuais,  gráficos, casos de uso, user stories, etc). O importante é deixar claro qual o formato e que tipo de dados devem ser considerados na especificação dos requisitos. 
+
+Dar exemplos.
+
+Obs. o documento deve conter um controle de versão.
+
+Postar em pdf.
+
+Lembrem-se que é um modelo que poderá ser utilizado em vários projetos ou até mesmo uma forma de comparar com ferramentas existentes no mercado, se as ferramentas atendem ao necessário para a gestão dos requisitos.

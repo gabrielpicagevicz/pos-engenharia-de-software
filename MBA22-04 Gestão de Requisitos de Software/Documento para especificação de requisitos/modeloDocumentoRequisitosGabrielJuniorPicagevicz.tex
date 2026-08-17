@@ -1,0 +1,158 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{titlesec}
+
+\definecolor{utfprAzul}{RGB}{0,51,102}
+\definecolor{cabecalho}{RGB}{230,230,230}
+\definecolor{simCor}{RGB}{198,239,206}
+\definecolor{parcialCor}{RGB}{255,235,156}
+\definecolor{naoCor}{RGB}{255,199,206}
+
+\hypersetup{colorlinks=true, linkcolor=utfprAzul, urlcolor=utfprAzul}
+\titleformat{\section}{\large\bfseries\color{utfprAzul}}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\normalsize\bfseries\color{utfprAzul}}{\thesubsection}{0.6em}{}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\title{\color{utfprAzul}Modelo de Documento de Especificação de Requisitos}
+\author{Gabriel Junior Picagevicz \\ MBA em Engenharia de Software -- UTFPR \\ Disciplina: Gestão de Requisitos de Software}
+\date{Agosto de 2026}
+
+\begin{document}
+\maketitle
+
+\section*{Controle de Versão}
+\begin{longtable}{C{1.5cm} C{2cm} L{3.5cm} L{8cm}}
+\toprule
+\rowcolor{cabecalho}
+\textbf{Versão} & \textbf{Data} & \textbf{Autor} & \textbf{Descrição da alteração} \\
+\midrule
+1.0 & 16/08/2026 & Gabriel Junior Picagevicz & Criação do modelo de documento de requisitos. \\
+\bottomrule
+\end{longtable}
+
+\section{Introdução}
+Este documento é um \textbf{modelo reutilizável} de especificação de requisitos, dividido em requisitos de \textbf{negócio}, \textbf{funcionais} e \textbf{não funcionais}. Pode ser usado em qualquer projeto (basta trocar os exemplos) e também como checklist para avaliar se uma ferramenta de mercado (Jira, Confluence, etc.) atende ao necessário para gestão de requisitos.
+
+\section{Formato adotado}
+Cada requisito é descrito em texto simples e claro, sem ambiguidade, termos vagos (``fácil'', ``rápido'') ou mais de uma ideia por frase. Identificação por prefixo:
+
+\begin{itemize}[nosep]
+    \item \textbf{RN-XX} -- Requisito de Negócio
+    \item \textbf{RF-XX} -- Requisito Funcional (também pode ser escrito como \textit{user story}: ``Como \textit{<usuário>}, eu quero \textit{<objetivo>} para \textit{<razão>}'')
+    \item \textbf{RNF-XX} -- Requisito Não Funcional
+\end{itemize}
+
+\section{Atributos considerados}
+\begin{longtable}{L{3cm} L{9.5cm}}
+\toprule
+\rowcolor{cabecalho}
+\textbf{Atributo} & \textbf{Descrição} \\
+\midrule
+ID & Código único (RN-XX / RF-XX / RNF-XX) \\
+Descrição & Texto do requisito \\
+Prioridade & MoSCoW (Must, Should, Could, Won't) \\
+Fonte & Stakeholder que solicitou o requisito \\
+Critério de aceite & Como o requisito será testado/validado \\
+Categoria & Só para RNF: desempenho, segurança, usabilidade, etc. \\
+Dependências & IDs de requisitos relacionados \\
+Status & Proposto, Aprovado, Implementado, Testado \\
+Versão & Versão do próprio requisito \\
+Responsável & Quem documentou \\
+Data & Criação/última atualização \\
+\bottomrule
+\end{longtable}
+
+\section{Requisitos de Negócio}
+\subsection*{Exemplo -- RN-01}
+\begin{longtable}{L{3cm} L{9.5cm}}
+\toprule
+\rowcolor{cabecalho}
+\multicolumn{2}{l}{\textbf{RN-01}} \\
+\midrule
+Descrição & O hotel deve reduzir o tempo médio de atendimento na recepção. \\
+Prioridade & Must \\
+Fonte & Diretoria de Operações \\
+Critério de aceite & Tempo médio de \textit{check-in} $\leq$ 4 minutos. \\
+Status & Aprovado \\
+Versão & 1.0 \\
+\bottomrule
+\end{longtable}
+
+\section{Requisitos Funcionais}
+\subsection*{Exemplo -- RF-01}
+\begin{longtable}{L{3cm} L{9.5cm}}
+\toprule
+\rowcolor{cabecalho}
+\multicolumn{2}{l}{\textbf{RF-01}} \\
+\midrule
+Descrição & O recepcionista deve visualizar o número do quarto de um hóspede em até 2 segundos após a busca. \\
+Prioridade & Must \\
+Fonte & Gerência de Recepção \\
+Critério de aceite & Tempo de resposta $\leq$ 2s em 95\% das buscas. \\
+Dependências & RN-01, RNF-01 \\
+Status & Aprovado \\
+Versão & 1.0 \\
+\bottomrule
+\end{longtable}
+
+\textit{Mesmo requisito em user story:} Como recepcionista, eu quero visualizar o número do quarto de um hóspede para lhe telefonar caso alguém queira contatá-lo.
+
+\section{Requisitos Não Funcionais}
+\subsection*{Exemplo -- RNF-01}
+\begin{longtable}{L{3cm} L{9.5cm}}
+\toprule
+\rowcolor{cabecalho}
+\multicolumn{2}{l}{\textbf{RNF-01}} \\
+\midrule
+Descrição & O sistema deve responder às consultas de quarto rapidamente. \\
+Categoria & Desempenho \\
+Critério de aceite & Tempo de resposta $\leq$ 2 segundos, com até 50 usuários simultâneos. \\
+Dependências & RF-01 \\
+Status & Aprovado \\
+Versão & 1.0 \\
+\bottomrule
+\end{longtable}
+
+\section{Comparação com ferramentas de mercado}
+Legenda: \colorbox{simCor}{Sim} -- nativo; \colorbox{parcialCor}{Parcial} -- via customização; \colorbox{naoCor}{Não} -- não suportado.
+
+\begin{longtable}{L{5cm} C{3cm} C{3cm}}
+\toprule
+\rowcolor{cabecalho}
+\textbf{Recurso} & \textbf{Jira} & \textbf{Confluence} \\
+\midrule
+Requisito de negócio dedicado & \cellcolor{parcialCor}Parcial & \cellcolor{simCor}Sim \\
+User story nativa & \cellcolor{simCor}Sim & \cellcolor{naoCor}Não \\
+RNF com métrica obrigatória & \cellcolor{naoCor}Não & \cellcolor{naoCor}Não \\
+Controle de versão do documento & \cellcolor{naoCor}Não & \cellcolor{simCor}Sim \\
+\bottomrule
+\end{longtable}
+
+Ferramentas ágeis cobrem bem requisitos funcionais (user story), mas exigem adaptação para requisitos de negócio e métricas de RNF.
+
+\section{Considerações Finais}
+Este modelo é genérico: basta trocar os exemplos pelo domínio de cada novo projeto, mantendo a estrutura de seções e atributos.
+
+\section*{Referências}
+\begin{itemize}[nosep]
+    \item SOMMERVILLE, I. \textit{Engenharia de Software}. 10. ed. São Paulo: Pearson, 2018.
+    \item IEEE Std 830-1998 -- Recommended Practice for Software Requirements Specifications.
+    \item HADDAD, F. B. B. \textit{Documentação de Requisitos} -- Material de aula, UTFPR, 2026.
+\end{itemize}
+
+\end{document}

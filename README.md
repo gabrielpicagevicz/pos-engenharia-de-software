@@ -19,4 +19,4 @@ matéria/
 
 | Matéria | Atividades |
 |---|---|
-| [MBA22-04 Gestão de Requisitos de Software](<./MBA22-04 Gestão de Requisitos de Software>) | [Requisitos de Software](<./MBA22-04 Gestão de Requisitos de Software/Requisitos de Software>) |
+| [MBA22-04 Gestão de Requisitos de Software](<./MBA22-04 Gestão de Requisitos de Software>) | [Requisitos de Software](<./MBA22-04 Gestão de Requisitos de Software/Requisitos de Software>), [Documento para especificação de requisitos](<./MBA22-04 Gestão de Requisitos de Software/Documento para especificação de requisitos>) |

@@ -1,0 +1,108 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage[scaled]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{titlesec}
+
+\definecolor{utfprAzul}{RGB}{0,51,102}
+\definecolor{cabecalho}{RGB}{230,230,230}
+\definecolor{mustCor}{RGB}{255,199,206}
+\definecolor{shouldCor}{RGB}{255,235,156}
+\definecolor{couldCor}{RGB}{198,224,255}
+\definecolor{wontCor}{RGB}{221,221,221}
+
+\hypersetup{colorlinks=true, linkcolor=utfprAzul, urlcolor=utfprAzul}
+\titleformat{\section}{\large\bfseries\color{utfprAzul}}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\normalsize\bfseries\color{utfprAzul}}{\thesubsection}{0.6em}{}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+
+\title{\color{utfprAzul}Negociação e Priorização de Requisitos -- Atividade Prática}
+\author{Gabriel Junior Picagevicz \\ MBA em Engenharia de Software -- UTFPR \\ Disciplina: Gestão de Requisitos de Software}
+\date{Agosto de 2026}
+
+\begin{document}
+\maketitle
+
+\section{Introdução}
+Esta atividade consiste em elaborar uma lista de atividades pessoais, profissionais e do curso, escolher uma técnica de priorização (dentre as apresentadas em aula) e aplicá-la, relatando ao final as dificuldades encontradas e eventuais negociações necessárias.
+
+\section{Lista de Atividades}
+Período de férias, lista real do autor, misturando pessoal e curso (MBA), que segue com prazos mesmo durante o recesso.
+
+\begin{longtable}{C{1.2cm} L{7.3cm} C{2.5cm}}
+\toprule
+\rowcolor{cabecalho}
+\textbf{ID} & \textbf{Atividade} & \textbf{Contexto} \\
+\midrule
+A1 & Entregar a Atividade Prática 2 de Avaliação e Melhoria de Processo de Software & Curso \\
+A2 & Concluir esta atividade de Negociação e Priorização de Requisitos & Curso \\
+A3 & Entregar outras atividades pendentes do curso & Curso \\
+A4 & Assistir a uma aula gravada que ficou atrasada & Curso \\
+A5 & Levar o carro para manutenção & Pessoal \\
+A6 & Arrumar as coisas e viajar para a casa dos pais & Pessoal \\
+A7 & Ir à academia & Pessoal \\
+A8 & Comprar um presente para levar aos pais (adicionado, ligado à viagem A6) & Pessoal \\
+\bottomrule
+\end{longtable}
+
+\section{Técnica de Priorização Escolhida}
+Foi escolhida a técnica de \textbf{agrupamento MoSCoW} (Must, Should, Could, Won't), apresentada em aula. Motivos da escolha:
+\begin{itemize}[nosep]
+    \item É uma técnica simples, recomendada como ponto de partida antes de técnicas mais sofisticadas (ex.: AHP);
+    \item Funciona bem mesmo sem uma equipe formal de decisores -- adequada para uma lista pessoal com atividades de naturezas distintas (trabalho, curso, pessoal);
+    \item Cada categoria já carrega um critério implícito de urgência, o que ajuda a justificar a ordem para "terceiros" (família) quando necessário negociar.
+\end{itemize}
+
+Os critérios usados para classificar cada atividade foram, principalmente, \textbf{sensibilidade temporal} (prazo de entrega ou data da viagem) e \textbf{dependência entre atividades} (ex.: a viagem depende do carro estar pronto) -- ambos da Tabela 4 (Critérios de priorização) do material de aula.
+
+\section{Aplicação da Técnica (MoSCoW)}
+\begin{longtable}{C{1cm} L{6.3cm} C{1.8cm} L{4cm}}
+\toprule
+\rowcolor{cabecalho}
+\textbf{ID} & \textbf{Atividade} & \textbf{Grupo} & \textbf{Justificativa} \\
+\midrule
+A1 & Entregar Atividade Prática 2 (Melhoria de Processo) & \cellcolor{mustCor}Must & Prazo fixo de entrega da disciplina \\
+A2 & Concluir esta atividade (Negociação e Priorização) & \cellcolor{mustCor}Must & Prazo fixo de entrega da disciplina \\
+A3 & Entregar outras atividades pendentes do curso & \cellcolor{mustCor}Must & Prazo fixo de entrega da disciplina \\
+A5 & Levar carro para manutenção & \cellcolor{shouldCor}Should & Dependência: a viagem (A6) só é segura com o carro revisado \\
+A6 & Arrumar as coisas e viajar para casa dos pais & \cellcolor{shouldCor}Should & Data da viagem já marcada, depende de A5 estar pronta antes \\
+A4 & Assistir aula gravada atrasada & \cellcolor{couldCor}Could & Importante acompanhar o curso, mas sem prazo imediato \\
+A8 & Comprar presente para os pais & \cellcolor{couldCor}Could & Desejável, sem prazo -- pode ser resolvido a caminho \\
+A7 & Ir à academia & \cellcolor{wontCor}Won't & Fica pausada nesta semana por causa da viagem; retoma na volta \\
+\bottomrule
+\end{longtable}
+
+\section{Relato Final}
+
+\subsection*{Dificuldades encontradas}
+A principal dificuldade foi que \textbf{três atividades caíram em Must ao mesmo tempo} (A1, A2, A3 -- todas entregas do curso com prazo), exatamente o problema descrito no material de aula: o desejo (e, aqui, a realidade) de ter várias coisas igualmente críticas. Como o MoSCoW não estabelece ordem interna dentro do grupo, foi preciso um critério extra e informal (ordem das datas de entrega) para decidir por onde começar. A segunda dificuldade foi enxergar que A6 (viagem) \textbf{dependia} de A5 (carro) estar pronto antes -- se essa dependência não fosse percebida, a viagem poderia ser adiantada sem o carro revisado.
+
+\subsection*{Técnica utilizada}
+Foi utilizado o agrupamento \textbf{MoSCoW}, dividindo as 8 atividades em Must (3), Should (2), Could (2) e Won't (1).
+
+\subsection*{Negociação com terceiros}
+Sim: \textbf{com a oficina mecânica (A5)}, a primeira vaga oferecida era para um dia depois da data planejada para sair para a casa dos pais (A6). Como A6 dependia de A5, foi negociado antecipar o horário para o primeiro encaixe da manhã, resolvendo o conflito sem atrasar a viagem -- um exemplo de \textbf{consenso}, já que a oficina aceitou o novo horário sem custo extra.
+
+\section{Considerações Finais}
+A técnica MoSCoW se mostrou suficiente para o problema, confirmando a recomendação do material de aula de \textbf{usar a técnica mais simples possível} antes de recorrer a métodos mais sofisticados como AHP ou Teste das 100 unidades. O maior aprendizado foi perceber que priorizar é, antes de tudo, um exercício de \textbf{negociação consigo mesmo} antes de negociar com terceiros.
+
+\section*{Referências}
+\begin{itemize}[nosep]
+    \item HADDAD, F. B. B. \textit{Negociação e Priorização de Requisitos} -- Material de aula, MBA em Engenharia de Software, UTFPR, 2026.
+    \item SOMMERVILLE, I. \textit{Engenharia de Software}. 10. ed. São Paulo: Pearson, 2018.
+\end{itemize}
+
+\end{document}
